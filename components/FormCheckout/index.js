@@ -20,7 +20,7 @@ export default function FormCheckout({ tickets }) {
   });
 
   const [payments, setPayments] = useState([]);
-
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     const fetctData = async () => {
       try {
@@ -33,7 +33,7 @@ export default function FormCheckout({ tickets }) {
           res.isChecked = false;
         });
         setPayments(res.data);
-      } catch (err) {}
+      } catch (err) { }
     };
 
     fetctData();
@@ -100,7 +100,7 @@ export default function FormCheckout({ tickets }) {
         });
         router.push('/dashboard');
       }
-    } catch (err) {}
+    } catch (err) { }
   };
 
   const handleChangePayment = (e, i) => {
